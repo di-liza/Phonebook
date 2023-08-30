@@ -1,5 +1,6 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
@@ -20,6 +21,8 @@ export const register = createAsyncThunk(
       token.set(data.token);
       return data;
     } catch (error) {
+      if (error.code === 'ERR_BAD_REQUEST')
+        toast.error('User are already exists!"');
       return rejectWithValue(error.message);
     }
   }
@@ -33,6 +36,8 @@ export const login = createAsyncThunk(
       token.set(data.token);
       return data;
     } catch (error) {
+      if (error.code === 'ERR_BAD_REQUEST')
+        toast.error('Invalid login or password!');
       return rejectWithValue(error.message);
     }
   }
@@ -64,6 +69,7 @@ export const fetchrefresh = createAsyncThunk(
       const { data } = await axios.get('/users/current');
       return data;
     } catch (error) {
+      toast.error(error.response.data.message);
       return rejectWithValue(error.message);
     }
   }

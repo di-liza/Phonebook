@@ -20,12 +20,10 @@ function ContactsForm({ closeModal }) {
   const contacts = useSelector(contactsSelector);
 
   const handleFormSubmit = (values, { resetForm }) => {
-    console.log('values:', values);
     const newContact = {
       name: values.name,
       number: values.number,
     };
-    console.log('newContact:', newContact);
 
     const isContactExists = contacts.some(
       contact => contact.name.toLowerCase() === newContact.name.toLowerCase()
