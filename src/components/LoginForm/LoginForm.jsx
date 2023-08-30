@@ -1,11 +1,11 @@
 import { Container } from 'components';
 import { useDispatch } from 'react-redux';
 import { login } from 'redux/auth/operation';
-import { FormStyled, StyledLink } from './LoginForm.styled';
+import { FormStyled, InputStyled, StyledLink } from './LoginForm.styled';
 
-import { TiArrowRight } from 'react-icons/ti';
-import { RiLockPasswordFill, RiMailFill } from 'react-icons/ri';
 import { Formik } from 'formik';
+import { RiLockPasswordFill, RiMailFill } from 'react-icons/ri';
+import { TiArrowRight } from 'react-icons/ti';
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -28,8 +28,7 @@ function LoginForm() {
               <RiMailFill size={17} />
               E-mail
             </span>
-            <input
-              className="styled-input"
+            <InputStyled
               type="text"
               name="email"
               placeholder="Enter your e-mail adress"
@@ -41,8 +40,7 @@ function LoginForm() {
               <RiLockPasswordFill size={17} />
               Password
             </span>
-            <input
-              className="styled-input"
+            <InputStyled
               type="password"
               name="password"
               placeholder="Enter your password"
