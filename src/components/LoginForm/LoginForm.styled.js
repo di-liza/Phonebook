@@ -70,6 +70,9 @@ export const FormStyled = styled(Form)`
   .welcomeMessage {
     font-size: 15px;
   }
+  .errorMessage {
+    color: red;
+  }
 `;
 export const StyledLink = styled(NavLink)`
   color: #e72eff;
