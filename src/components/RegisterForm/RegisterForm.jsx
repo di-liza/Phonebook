@@ -22,7 +22,6 @@ function RegisterForm() {
   const dispatch = useDispatch();
 
   const handleFormSubmit = async (values, { resetForm }) => {
-    console.log('values:', values);
     await dispatch(register(values));
     resetForm();
   };
