@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
+import { Field, Form } from 'formik';
 import { NavLink } from 'react-router-dom';
-import { Form, Field } from 'formik';
 
 export const FormStyled = styled(Form)`
   position: absolute;

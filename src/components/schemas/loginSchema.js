@@ -3,9 +3,10 @@ const loginSchema = yup.object({
   email: yup
     .string()
     .trim()
+    .email()
     .required('Email is required')
     .matches(
-      /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
+      /^[a-zA-Z0-9.-_]+@[a-zA-Z]+\.[a-zA-Z]{2,3}$/,
       'Invalid email format'
     ),
   password: yup

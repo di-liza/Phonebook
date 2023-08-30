@@ -9,17 +9,14 @@ import { TiArrowRight } from 'react-icons/ti';
 import { loginSchema } from 'components/schemas';
 
 const initialValues = {
-  login: '',
+  email: '',
   password: '',
 };
 
 function LoginForm() {
   const dispatch = useDispatch();
   const handleFormSubmit = (values, { resetForm }) => {
-    console.log('values:', values);
-    const email = values.login.value;
-    const password = values.password.value;
-    dispatch(login({ email, password }));
+    dispatch(login(values));
     resetForm();
   };
 
@@ -28,7 +25,7 @@ function LoginForm() {
       <Formik
         initialValues={initialValues}
         validationSchema={loginSchema}
-        onSubmit={{ handleFormSubmit }}
+        onSubmit={handleFormSubmit}
       >
         <FormStyled>
           <h2 className="title">Sing in</h2>
@@ -38,12 +35,12 @@ function LoginForm() {
               E-mail
             </span>
             <ErrorMessage
-              name="login"
+              name="email"
               render={message => <p className="errorMessage">{message}</p>}
             />
             <InputStyled
               type="text"
-              name="login"
+              name="email"
               placeholder="Enter your e-mail adress"
               required
             />
