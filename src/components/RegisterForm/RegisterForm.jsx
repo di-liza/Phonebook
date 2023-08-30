@@ -1,17 +1,16 @@
 import { Container } from 'components';
-import React from 'react';
+import { TiArrowRight } from 'react-icons/ti';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operation';
 import { FormStyled, InputStyled, StyledLink } from './RegisterForm.styled';
-import { TiArrowRight } from 'react-icons/ti';
 
+import { registerSchema } from 'components/schemas';
+import { ErrorMessage, Formik } from 'formik';
 import {
   RiLockPasswordFill,
   RiLoginCircleFill,
   RiMailFill,
 } from 'react-icons/ri';
-import { ErrorMessage, Formik } from 'formik';
-import { registerSchema } from 'components/schemas';
 
 const initialValues = {
   name: '',
@@ -22,10 +21,12 @@ const initialValues = {
 function RegisterForm() {
   const dispatch = useDispatch();
 
-  const handleFormSubmit = (values, { resetForm }) => {
-    dispatch(register(values));
+  const handleFormSubmit = async (values, { resetForm }) => {
+    console.log('values:', values);
+    await dispatch(register(values));
     resetForm();
   };
+
   return (
     <Container>
       <Formik
@@ -33,7 +34,7 @@ function RegisterForm() {
         initialValues={initialValues}
         validationSchema={registerSchema}
       >
-        <FormStyled onSubmit={handleFormSubmit}>
+        <FormStyled>
           <h2 className="title">Sign up</h2>
           <label className="styled-label">
             <span>
@@ -54,15 +55,15 @@ function RegisterForm() {
           <label className="styled-label">
             <span>
               <RiLoginCircleFill size={17} />
-              Login
+              Name
             </span>
             <ErrorMessage
-              name="email"
+              name="name"
               render={message => <p className="errorMessage">{message}</p>}
             />
             <InputStyled
               type="text"
-              name="email"
+              name="name"
               placeholder="Think of your username"
               required
             />

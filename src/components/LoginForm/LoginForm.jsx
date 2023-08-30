@@ -15,8 +15,9 @@ const initialValues = {
 
 function LoginForm() {
   const dispatch = useDispatch();
-  const handleFormSubmit = (values, { resetForm }) => {
-    dispatch(login(values));
+
+  const handleFormSubmit = async (values, { resetForm }) => {
+    await dispatch(login(values));
     resetForm();
   };
 

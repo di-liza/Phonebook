@@ -96,8 +96,7 @@ export const InputStyled = styled(Field)`
   display: block;
   height: 50px;
   width: 330px;
-  background-color: ${({ theme }) => theme.colors.inputBgColor};
-
+  background-color: rgba(255, 255, 255, 0.07);
   border-radius: 21px;
   padding: 0 10px;
   font-size: 14px;
