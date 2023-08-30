@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
+import { Field, Form } from 'formik';
 
-export const FormStyled = styled.form`
+export const FormStyled = styled(Form)`
   position: absolute;
   left: 35%;
   top: 15%;
@@ -33,27 +34,6 @@ export const FormStyled = styled.form`
     margin-top: 30px;
   }
 
-  .styled-input {
-    display: block;
-    height: 50px;
-    width: 330px;
-    background-color: ${({ theme }) => theme.colors.inputBgColor};
-    border-radius: 21px;
-    padding: 0 10px;
-    font-size: 14px;
-    font-weight: 300;
-    color: white;
-
-    ::placeholder {
-      color: rgb(255 255 255 / 69%);
-    }
-
-    :focus {
-      outline: none;
-      box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4),
-        inset -2px -2px 4px rgba(255, 255, 255, 0.5);
-    }
-  }
   .styled-label {
     display: block;
     font-size: 16px;
@@ -113,5 +93,31 @@ export const FormStyled = styled.form`
       background-color: #aeaeae;
       color: ${({ theme }) => theme.colors.white};
     }
+  }
+
+  .errorMessage {
+    color: red;
+  }
+`;
+
+export const InputStyled = styled(Field)`
+  display: block;
+  height: 50px;
+  width: 330px;
+  background-color: ${({ theme }) => theme.colors.inputBgColor};
+  border-radius: 21px;
+  padding: 0 10px;
+  font-size: 14px;
+  font-weight: 300;
+  color: white;
+
+  ::placeholder {
+    color: rgb(255 255 255 / 69%);
+  }
+
+  :focus {
+    outline: none;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.4),
+      inset -2px -2px 4px rgba(255, 255, 255, 0.5);
   }
 `;
