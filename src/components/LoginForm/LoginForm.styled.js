@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { mixins } from 'constants';
 import { Field, Form } from 'formik';
 import { NavLink } from 'react-router-dom';
 
@@ -43,10 +44,20 @@ export const FormStyled = styled(Form)`
   outline: none;
   border: none;
 
+  ${mixins.mobile} {
+    width: 300px;
+  }
+  ${mixins.tablet} {
+    width: 360px;
+  }
+
   .title {
     /* margin-top: 30px; */
     /* margin-top: 30px; */
     font-size: 30px;
+    ${mixins.tablet} {
+      font-size: 40px;
+    }
   }
 
   .styled-label {
@@ -60,6 +71,13 @@ export const FormStyled = styled(Form)`
     font-size: 15px;
     font-weight: 500;
     text-align: left;
+
+    ${mixins.mobile} {
+      width: 260px;
+    }
+    ${mixins.tablet} {
+      width: 300px;
+    }
 
     span {
       /* display: inline-flex;
@@ -85,19 +103,24 @@ export const FormStyled = styled(Form)`
     font-size: 22px;
     border-radius: 13px;
     overflow: hidden;
-
     background: ${({ theme }) => theme.mainButton.baseBgColor};
-
     color: ${({ theme }) => theme.colors.white};
     font-size: 22px;
-    /* border-radius: ${({ theme }) => theme.mainButton.borderRadious}; */
-
     box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
     overflow: hidden;
     transition: ${({ theme }) => theme.transition};
 
     :hover {
       background-color: ${({ theme }) => theme.mainButton.activeBgColor};
+    }
+
+    ${mixins.mobile} {
+      width: 100%;
+    }
+
+    ${mixins.tablet} {
+      width: 300px;
+      height: 45px;
     }
   }
   .welcomeMessage {
@@ -149,8 +172,16 @@ export const InputStyled = styled(Field)`
   font-size: 14px;
   font-weight: 300;
   color: white;
-
   transition: ${({ theme }) => theme.transition};
+
+  ${mixins.mobile} {
+    width: 235px;
+  }
+
+  ${mixins.tablet} {
+    width: 280px;
+    height: 45px;
+  }
 
   ::placeholder {
     color: rgb(255 255 255 / 69%);

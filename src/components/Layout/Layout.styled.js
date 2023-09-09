@@ -1,3 +1,4 @@
+import { mixins } from 'constants';
 import { NavLink } from 'react-router-dom';
 const { default: styled } = require('@emotion/styled');
 
@@ -43,6 +44,10 @@ export const StyledHeader = styled.header`
     justify-content: space-between;
 
     align-items: center;
+
+    ${mixins.tablet} {
+      width: 700px;
+    }
   }
   .links-box {
     /* display: flex;
@@ -102,6 +107,9 @@ export const AuthLink = styled(NavLink)`
 
   transition: ${({ theme }) => theme.transition};
 
+  ${mixins.tablet} {
+    padding: 5px 15px;
+  }
   &.active {
     color: rgb(212 66 213);
     border: 2px solid #6240a9;
