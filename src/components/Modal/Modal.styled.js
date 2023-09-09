@@ -1,4 +1,5 @@
 import styled from '@emotion/styled';
+import { mixins } from 'constants';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -9,13 +10,47 @@ export const Backdrop = styled.div`
   height: 100%;
   backdrop-filter: blur(10px);
   background-color: rgb(1 1 10 / 16%);
+`;
 
-  .modal {
+export const StyledModal = styled.div`
+  position: absolute;
+  top: 14%;
+  left: 14%;
+
+  ${mixins.tablet} {
+    left: 27%;
+  }
+  ${mixins.desktop} {
+    left: 35%;
+  }
+
+  .closeModalBtn {
+    transition: ${({ theme }) => theme.transition};
+
+    :hover {
+      background-color: #aeaeae;
+      color: ${({ theme }) => theme.colors.white};
+    }
+
     position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 900px;
-    height: 600px;
+    top: 10px;
+    right: 10px;
+    z-index: 100;
+
+    display: flex;
+    height: 23px;
+
+    align-items: center;
+    border: none;
+    outline: none;
+    color: #988989;
+
+    font-size: 15px;
+    border-radius: 6px;
+    text-align: center;
+    box-shadow: 0 6px 20px -5px rgba(0, 0, 0, 0.4);
+    overflow: hidden;
+    width: 30px;
+    background: transparent;
   }
 `;

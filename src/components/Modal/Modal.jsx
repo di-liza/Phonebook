@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { createPortal } from 'react-dom';
-
-// import { TiTimes } from 'react-icons/ti';
-import { Backdrop } from './Modal.styled';
+import { Backdrop, StyledModal } from './Modal.styled';
 import { ContactsForm } from 'components';
+import { TiTimes } from 'react-icons/ti';
 
 const modalRoot = document.getElementById('modal');
 
@@ -28,11 +27,17 @@ function Modal({ closeModal }) {
 
   return createPortal(
     <Backdrop onClick={handleBackdropClose}>
-      {/* <div className="modal"> */}
-      {/* {children} */}
-      <ContactsForm closeModal={closeModal} />
-
-      {/* </div> */}
+      <StyledModal>
+        <button
+          title="Close modal"
+          className="closeModalBtn"
+          type="button"
+          onClick={closeModal}
+        >
+          <TiTimes size={20} />
+        </button>
+        <ContactsForm closeModal={closeModal} />
+      </StyledModal>
     </Backdrop>,
     modalRoot
   );

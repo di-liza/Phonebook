@@ -1,17 +1,10 @@
-import { Container } from 'components';
+import { Container, FormTemplate } from 'components';
 import { useDispatch } from 'react-redux';
 import { login } from 'redux/auth/operation';
-import { FormStyled, InputStyled, StyledLink } from './LoginForm.styled';
-
-import { ErrorMessage, Formik } from 'formik';
-import { RiLockPasswordFill, RiMailFill } from 'react-icons/ri';
+import { Formik } from 'formik';
 import { TiArrowRight } from 'react-icons/ti';
 import { loginSchema } from 'components/schemas';
-
-const initialValues = {
-  email: '',
-  password: '',
-};
+import loginFormData from './loginFormData.js';
 
 function LoginForm() {
   const dispatch = useDispatch();
@@ -24,53 +17,18 @@ function LoginForm() {
   return (
     <Container>
       <Formik
-        initialValues={initialValues}
+        initialValues={loginFormData.initialValues}
         validationSchema={loginSchema}
         onSubmit={handleFormSubmit}
       >
-        <FormStyled>
-          <h2 className="title">Sing in</h2>
-          <label className="styled-label">
-            <span>
-              <RiMailFill size={17} />
-              E-mail
-            </span>
-            <ErrorMessage
-              name="email"
-              render={message => <p className="errorMessage">{message}</p>}
-            />
-            <InputStyled
-              type="text"
-              name="email"
-              placeholder="Enter your e-mail adress"
-              required
-            />
-          </label>
-          <label className="styled-label">
-            <span>
-              <RiLockPasswordFill size={17} />
-              Password
-            </span>
-            <ErrorMessage
-              name="password"
-              render={message => <p className="errorMessage">{message}</p>}
-            />
-            <InputStyled
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-            />
-          </label>
-          <button className="loginBtn" type="submit">
-            Sing in
-          </button>
-          <p className="welcomeMessage">
-            New to Phone Book?
-            <StyledLink to="/register">
-              Create an account <TiArrowRight size={20} />
-            </StyledLink>
-          </p>
-        </FormStyled>
+        <FormTemplate
+          title={'Sing in'}
+          inputs={loginFormData.loginInputs}
+          welcomeMessage={' New to Phone Book?'}
+          linkText={'Create an account'}
+          linkTo={'/register'}
+          linkIcon={<TiArrowRight size={20} />}
+        />
       </Formik>
     </Container>
   );

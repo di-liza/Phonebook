@@ -1,6 +1,6 @@
 export { default as Layout } from './Layout/Layout.jsx';
 export { default as App } from './App';
-export { default as Container } from './Container';
+export { default as Container } from './Container/Container.jsx';
 export { default as UserMenu } from './UserMenu/UserMenu.jsx';
 export { default as ContactList } from './ContactList/ContactList';
 export { default as PublicRoute } from './PublicRoute';
@@ -12,3 +12,4 @@ export { default as Modal } from './Modal/Modal.jsx';
 export { default as LoginForm } from './LoginForm/LoginForm.jsx';
 export { default as RegisterForm } from './RegisterForm/RegisterForm.jsx';
 export { default as Filter } from './Filter/Filter.jsx';
+export { default as FormTemplate } from './FormTemplate/FormTemplate.jsx';
