@@ -13,6 +13,6 @@ export const StyledContainer = styled.div`
 
   ${mixins.tablet} {
     width: 700px;
-    padding: 50px 20px;
+    padding: 25px 20px;
   }
 `;

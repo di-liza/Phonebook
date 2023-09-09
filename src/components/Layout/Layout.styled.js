@@ -48,6 +48,9 @@ export const StyledHeader = styled.header`
     ${mixins.tablet} {
       width: 700px;
     }
+    ${mixins.desktop} {
+      width: 1200px;
+    }
   }
   .links-box {
     /* display: flex;
