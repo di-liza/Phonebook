@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import { mixins } from 'constants';
 
 export const Backdrop = styled.div`
   position: fixed;
@@ -10,20 +9,16 @@ export const Backdrop = styled.div`
   height: 100%;
   backdrop-filter: blur(10px);
   background-color: rgb(1 1 10 / 16%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 export const StyledModal = styled.div`
-  position: absolute;
-  top: 14%;
-  left: 14%;
-
-  ${mixins.tablet} {
-    left: 27%;
-  }
-  ${mixins.desktop} {
-    left: 35%;
-  }
-
+  position: relative;
+  z-index: 100;
+  width: 80%;
+  max-width: 400px;
   .closeModalBtn {
     transition: ${({ theme }) => theme.transition};
 
