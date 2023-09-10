@@ -1,6 +1,7 @@
 import { selectFiter, setFilterValue } from 'redux/filter';
-import { FilterInput } from './Filter.styled';
+import { FilterWrapp } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
+import { BiSearchAlt2 } from 'react-icons/bi';
 
 function Filter() {
   const filter = useSelector(selectFiter);
@@ -11,13 +12,16 @@ function Filter() {
   };
 
   return (
-    <FilterInput
-      onChange={handleFilterChange}
-      className="styled-input"
-      value={filter}
-      name={filter}
-      placeholder="Find contacts by name"
-    ></FilterInput>
+    <FilterWrapp>
+      <input
+        className="input"
+        onChange={handleFilterChange}
+        value={filter}
+        name={filter}
+        placeholder="Find contacts by name"
+      ></input>
+      <BiSearchAlt2 className="icon" />
+    </FilterWrapp>
   );
 }
 

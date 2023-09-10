@@ -39,6 +39,10 @@ export const StyledHeader = styled.header`
     display: flex;
     align-items: center;
     gap: 5px;
+
+    ${mixins.tablet} {
+      gap: 15px;
+    }
   }
   .linksWrapper {
     display: flex;
@@ -66,6 +70,11 @@ export const StyledLink = styled(NavLink)`
   .icon {
     width: 30px;
     height: 30px;
+
+    ${mixins.tablet} {
+      width: 40px;
+      height: 40px;
+    }
   }
 `;
 

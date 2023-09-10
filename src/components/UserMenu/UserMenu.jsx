@@ -17,12 +17,16 @@ function UserMenu() {
   return (
     <>
       <UserMenuStyled>
-        <p className="welcomeMessage">
-          <TiUser size={20} /> Welcome
-        </p>
-        <p>{userName}</p>
+        <div className="userInfo">
+          <TiUser size={20} />
+          <p className="userName">{userName}</p>
+        </div>
         <button className="logOutBtn" type="button" onClick={handleLogOut}>
-          <HiMiniArrowRightOnRectangle size={15} title={'Log out'} />
+          <HiMiniArrowRightOnRectangle
+            className="icon"
+            size={15}
+            title={'Log out'}
+          />
         </button>
       </UserMenuStyled>
     </>
