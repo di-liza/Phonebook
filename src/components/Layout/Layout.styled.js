@@ -3,18 +3,10 @@ import { NavLink } from 'react-router-dom';
 const { default: styled } = require('@emotion/styled');
 
 export const StyledHeader = styled.header`
-  /* padding: 10px;
-  display: flex;
-  justify-content: center; */
-
   padding: 0;
-
   display: flex;
-
   justify-content: center;
-
   width: 100%;
-
   transition: ${({ theme }) => theme.transition};
 
   ::after {
@@ -27,15 +19,6 @@ export const StyledHeader = styled.header`
     z-index: -10;
   }
   .navigation {
-    /* width: 1000px;
-    display: flex;
-    gap: 10px;
-    padding: 20px;
-    position: relative;
-    padding: 0 100px;
-    align-items: baseline;
-    justify-content: space-between; */
-
     width: 250px;
 
     display: flex;
@@ -53,21 +36,11 @@ export const StyledHeader = styled.header`
     }
   }
   .links-box {
-    /* display: flex;
-    gap: 22px;
-    align-items: center; */
-
-    .css-1sr9s5k .links-box {
-      display: flex;
-      gap: 22px;
-      align-items: center;
-    }
+    display: flex;
+    align-items: center;
+    gap: 5px;
   }
-
   .linksWrapper {
-    /* display: flex;
-    gap: 20px; */
-
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -88,6 +61,11 @@ export const StyledLink = styled(NavLink)`
   }
   :hover {
     color: rgb(212 66 213);
+  }
+
+  .icon {
+    width: 30px;
+    height: 30px;
   }
 `;
 

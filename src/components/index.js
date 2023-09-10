@@ -13,3 +13,4 @@ export { default as LoginForm } from './LoginForm/LoginForm.jsx';
 export { default as RegisterForm } from './RegisterForm/RegisterForm.jsx';
 export { default as Filter } from './Filter/Filter.jsx';
 export { default as FormTemplate } from './FormTemplate/FormTemplate.jsx';
+export { default as HomePageView } from './HomePageView/HomePageView.jsx';

@@ -3,21 +3,18 @@ const { default: styled } = require('@emotion/styled');
 export const UserMenuStyled = styled.div`
   display: flex;
   align-items: center;
-  gap: 20px;
-  font-size: 20px;
+  width: 160px;
+  gap: 5px;
+  font-size: 15px;
+  justify-content: flex-end;
 
   .logOutBtn {
-    width: 93px;
-    height: 31px;
     border: none;
     display: flex;
     outline: none;
-    background: ${({ theme }) => theme.mainButton.baseBgColor};
-    color: ${({ theme }) => theme.colors.white};
+    color: white;
     font-size: 15px;
-    border-radius: ${({ theme }) => theme.mainButton.borderRadious};
-
-    box-shadow: ${({ theme }) => theme.baseBoxShadow};
+    background-color: transparent;
     overflow: hidden;
     border-radius: 17px;
     align-items: center;

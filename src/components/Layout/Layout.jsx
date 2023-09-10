@@ -15,11 +15,11 @@ function Layout() {
         <nav className="navigation">
           <div className="links-box">
             <StyledLink to="/">
-              <AiFillHome size={40} title={'Home'} />
+              <AiFillHome className="icon" title={'Home'} />
             </StyledLink>
             {isLoggedIn && (
               <StyledLink to="/contacts">
-                <RiContactsBookFill size={40} title={'Phone Book'} />
+                <RiContactsBookFill className="icon" title={'Phone Book'} />
               </StyledLink>
             )}
           </div>
