@@ -26,15 +26,29 @@ export const ContactsWrapper = styled.div`
   ${mixins.tablet} {
     width: 500px;
   }
+  ${mixins.desktop} {
+    width: 1100px;
+    height: 800px;
+    padding-top: 75px;
+  }
 
   .headerWrap {
     display: flex;
     width: 160px;
     gap: 15px;
     margin-bottom: 30px;
-    margin: 0 auto;
+    margin: 0 auto 15px auto;
     justify-content: center;
     align-items: center;
+
+    ${mixins.tablet} {
+      margin: 0 auto 25px auto;
+    }
+    ${mixins.desktop} {
+      margin: 0 auto 30px auto;
+      width: 500px;
+      gap: 20px;
+    }
   }
 
   .title {
@@ -45,6 +59,9 @@ export const ContactsWrapper = styled.div`
 
     ${mixins.tablet} {
       font-size: 35px;
+    }
+    ${mixins.desktop} {
+      font-size: 60px;
     }
   }
   .addContactBtn {
@@ -62,6 +79,10 @@ export const ContactsWrapper = styled.div`
       width: 30px;
       height: 25px;
     }
+    ${mixins.desktop} {
+      width: 40px;
+      height: 35px;
+    }
   }
   .addIcon {
     width: 15px;
@@ -69,6 +90,10 @@ export const ContactsWrapper = styled.div`
     ${mixins.tablet} {
       width: 20px;
       height: 20px;
+    }
+    ${mixins.desktop} {
+      width: 30px;
+      height: 30px;
     }
   }
 

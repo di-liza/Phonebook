@@ -15,7 +15,7 @@ export const Item = styled.li`
   width: 210px;
   border-bottom: 1px solid #aeaeae;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 10px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -32,11 +32,20 @@ export const Item = styled.li`
     flex-wrap: nowrap;
   }
 
+  ${mixins.desktop} {
+    width: 900px;
+    padding-bottom: 15px;
+    font-size: 30px;
+  }
+
   .inputWrapp {
     display: flex;
     text-align: left;
     gap: 5px;
     flex-wrap: nowrap;
+    ${mixins.desktop} {
+      gap: 65px;
+    }
   }
   .contactInfoWrap {
     display: flex;
@@ -49,6 +58,9 @@ export const Item = styled.li`
 
     ${mixins.tablet} {
       width: 330px;
+    }
+    ${mixins.desktop} {
+      width: 700px;
     }
   }
   .button {
@@ -67,17 +79,29 @@ export const Item = styled.li`
     height: 20px;
     justify-content: center;
     transition: ${({ theme }) => theme.transition};
+    ${mixins.desktop} {
+      width: 30px;
+      height: 30px;
+    }
   }
   .deleteBtn {
     :hover {
       background-color: ${({ theme }) => theme.colors.grey};
       color: red;
     }
+    .icon {
+      width: 30px;
+      height: 30px;
+    }
   }
   .editBtn {
     :hover {
       background-color: ${({ theme }) => theme.colors.grey};
       color: ${({ theme }) => theme.colors.blue};
+    }
+    .icon {
+      width: 30px;
+      height: 30px;
     }
   }
   .saveBtn {
@@ -105,6 +129,19 @@ export const Item = styled.li`
       background-color: ${({ theme }) => theme.colors.grey};
       color: ${({ theme }) => theme.colors.green};
     }
+
+    ${mixins.desktop} {
+      width: 30px;
+      height: 30px;
+    }
+    .icon {
+      width: 20px;
+      height: 20px;
+      ${mixins.desktop} {
+        width: 25px;
+        height: 25px;
+      }
+    }
   }
   .textWrapper {
     display: flex;
@@ -118,19 +155,6 @@ export const Item = styled.li`
     width: 100px;
     justify-content: flex-end;
     width: 200px;
-  }
-  .inputName {
-    /* position: relative; */
-
-    /* ::after {
-      content: '';
-      position: absolute;
-      width: 1px;
-      height: 29px;
-      top: -4px;
-      left: 315px;
-      background-color: ${({ theme }) => theme.colors.grey};
-    } */
   }
 
   .input {
@@ -165,6 +189,12 @@ export const Item = styled.li`
       width: 170px;
       padding: 2px 5px;
       font-size: 15px;
+    }
+    ${mixins.desktop} {
+      width: 350px;
+      padding: 2px 5px;
+      font-size: 26px;
+      height: 40px;
     }
   }
 `;

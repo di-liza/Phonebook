@@ -17,6 +17,9 @@ export const StyledHeader = styled.header`
     top: 80px;
     position: absolute;
     z-index: -10;
+    ${mixins.desktop} {
+      top: 125px;
+    }
   }
   .navigation {
     width: 250px;
@@ -33,6 +36,7 @@ export const StyledHeader = styled.header`
     }
     ${mixins.desktop} {
       width: 1200px;
+      padding: 25px;
     }
   }
   .links-box {
@@ -74,6 +78,11 @@ export const StyledLink = styled(NavLink)`
     ${mixins.tablet} {
       width: 40px;
       height: 40px;
+    }
+
+    ${mixins.desktop} {
+      width: 100px;
+      height: 65px;
     }
   }
 `;

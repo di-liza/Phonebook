@@ -3,21 +3,24 @@ import { mixins } from 'constants';
 
 export const FilterWrapp = styled.div`
   position: relative;
-  margin: 0 auto;
   width: 204px;
+  margin: 20px auto;
 
   ${mixins.tablet} {
     width: 354px;
   }
+  ${mixins.desktop} {
+    width: 700px;
+    margin: 0 auto 50px auto;
+  }
   .input {
     display: block;
-    height: 30px;
-    margin: 20px auto;
+    height: 25px;
+
     width: 150px;
     background-color: rgba(255, 255, 255, 0.07);
     border-radius: 10px;
     padding: 0 25px;
-    margin: 1;
     font-size: 14px;
     font-weight: 300;
     color: white;
@@ -25,8 +28,15 @@ export const FilterWrapp = styled.div`
 
     ${mixins.tablet} {
       height: 25px;
-      margin: 24px auto;
+      margin: 25px auto;
       width: 300px;
+    }
+    ${mixins.desktop} {
+      font-size: 25px;
+      height: 50px;
+      width: 650px;
+      margin: 30px auto;
+      padding: 0 35px;
     }
 
     ::placeholder {
@@ -45,6 +55,12 @@ export const FilterWrapp = styled.div`
     ${mixins.tablet} {
       top: 5px;
       left: 7px;
+    }
+    ${mixins.desktop} {
+      width: 20px;
+      height: 25px;
+      top: 16px;
+      left: 10px;
     }
   }
 `;

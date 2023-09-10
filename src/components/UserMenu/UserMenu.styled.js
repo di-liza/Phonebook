@@ -14,10 +14,23 @@ export const UserMenuStyled = styled.div`
     font-size: 20px;
     gap: 20px;
   }
+  ${mixins.desktop} {
+    width: 300px;
+    font-size: 40px;
+    gap: 38px;
+  }
   .userInfo {
     display: flex;
     gap: 5px;
     align-items: flex-end;
+    .icon {
+      width: 20px;
+      height: 20px;
+      ${mixins.desktop} {
+        width: 50px;
+        height: 50px;
+      }
+    }
   }
   .userName {
     text-transform: capitalize;
@@ -29,7 +42,6 @@ export const UserMenuStyled = styled.div`
     color: white;
     font-size: 15px;
     background-color: transparent;
-    overflow: hidden;
     border-radius: 17px;
     align-items: center;
     justify-content: center;
@@ -51,6 +63,10 @@ export const UserMenuStyled = styled.div`
     ${mixins.tablet} {
       width: 20px;
       height: 20px;
+    }
+    ${mixins.desktop} {
+      width: 40px;
+      height: 45px;
     }
   }
 `;

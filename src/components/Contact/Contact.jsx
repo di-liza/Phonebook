@@ -74,7 +74,7 @@ function Contact({ contact }) {
             onClick={handleSaveClick}
             title="Save changes"
           >
-            <TiInputChecked size={20} />
+            <TiInputChecked className="icon" />
           </button>
         ) : (
           <button
@@ -83,7 +83,7 @@ function Contact({ contact }) {
             title="Edit contact"
             onClick={handleEditClick}
           >
-            <TiEdit size={20} />
+            <TiEdit className="icon" size={20} />
           </button>
         )}
 
@@ -95,7 +95,7 @@ function Contact({ contact }) {
             dispatch(deleteContact(contact.id));
           }}
         >
-          <TiDelete size={20} />
+          <TiDelete className="icon" size={20} />
         </button>
       </div>
     </Item>

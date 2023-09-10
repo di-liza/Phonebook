@@ -18,7 +18,7 @@ function UserMenu() {
     <>
       <UserMenuStyled>
         <div className="userInfo">
-          <TiUser size={20} />
+          <TiUser className="icon" />
           <p className="userName">{userName}</p>
         </div>
         <button className="logOutBtn" type="button" onClick={handleLogOut}>
