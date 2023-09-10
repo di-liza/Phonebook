@@ -35,6 +35,12 @@ export const FormStyled = styled(Form)`
     padding-bottom: 10px;
   }
 
+  .inputInfoWrapp {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 5px;
+  }
   .formTitle {
     font-size: 30px;
     ${mixins.tablet} {

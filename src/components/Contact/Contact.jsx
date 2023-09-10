@@ -34,7 +34,7 @@ function Contact({ contact }) {
     <Item>
       <div className="textWrapper">
         {isEditing ? (
-          <>
+          <div className="inputWrapp">
             <input
               className="input inputName"
               type="text"
@@ -55,17 +55,17 @@ function Contact({ contact }) {
               placeholder="Enter phone number"
               onChange={e => setNumber(e.target.value)}
             />
-          </>
+          </div>
         ) : (
-          <>
-            <p className="nameWrap">{name}</p>
+          <div className="contactInfoWrap">
+            <p>{name}</p>
             <p>{number}</p>
-          </>
+          </div>
         )}
       </div>
       <div className="buttonsWrapper">
         <a className="callLink" href={`tel:${number}`}>
-          <FiPhone size={20} />
+          <FiPhone size={15} />
         </a>
         {isEditing ? (
           <button
@@ -74,7 +74,7 @@ function Contact({ contact }) {
             onClick={handleSaveClick}
             title="Save changes"
           >
-            <TiInputChecked size={21} />
+            <TiInputChecked size={20} />
           </button>
         ) : (
           <button

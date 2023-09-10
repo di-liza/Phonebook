@@ -17,8 +17,10 @@ function FormTemplate({
       <h2 className="formTitle">{title}</h2>
       {inputs.map((input, index) => (
         <label className="formLabel" key={index}>
-          {input.icon}
-          <span>{input.label}</span>
+          <div className="inputInfoWrapp">
+            {input.icon}
+            <span>{input.label}</span>
+          </div>
           <ErrorMessage
             name={input.name}
             render={message => <p className="errorMessage">{message}</p>}

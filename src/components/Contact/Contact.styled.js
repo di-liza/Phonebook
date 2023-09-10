@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
+import { mixins } from 'constants';
 
 const slideIn = keyframes`
   from {
@@ -11,35 +12,60 @@ const slideIn = keyframes`
 `;
 
 export const Item = styled.li`
-  width: 100%;
-  padding: 5px;
-  border-bottom: ${({ theme }) => theme.borders.baseBorder};
-
+  width: 210px;
+  border-bottom: 1px solid #aeaeae;
   display: flex;
-  padding-left: 10px;
-  padding-right: 10px;
-  align-items: center;
-  justify-content: space-between;
-
+  align-items: flex-start;
   margin-bottom: 10px;
   margin: 0 auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 5px;
   :nth-last-of-type() {
     margin-bottom: 0px;
   }
   animation: ${slideIn} 0.3s ease-in-out forwards;
 
+  ${mixins.tablet} {
+    width: 455px;
+    flex-wrap: nowrap;
+  }
+
+  .inputWrapp {
+    display: flex;
+    text-align: left;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+  .contactInfoWrap {
+    display: flex;
+    text-align: left;
+    gap: 25px;
+    width: 210px;
+    margin: 0;
+    justify-content: space-between;
+    align-items: center;
+
+    ${mixins.tablet} {
+      width: 330px;
+    }
+  }
   .button {
     display: block;
     display: flex;
     align-items: center;
     border: none;
     outline: none;
-    color: ${({ theme }) => theme.colors.beige};
+    color: #988989;
     font-size: 15px;
-    border-radius: 40px;
+    border-radius: 5px;
     text-align: center;
-    box-shadow: ${({ theme }) => theme.baseBoxShadow};
-    overflow: hidden;
+    transition: all 0.3s ease;
+    width: 20px;
+    padding: 0;
+    height: 20px;
+    justify-content: center;
     transition: ${({ theme }) => theme.transition};
   }
   .deleteBtn {
@@ -61,22 +87,20 @@ export const Item = styled.li`
     }
   }
   .callLink {
-    width: 30px;
-    height: 22px;
+    width: 20px;
+    height: 20px;
     justify-content: center;
-    background-color: ${({ theme }) => theme.colors.white};
-
+    background-color: #fff;
     display: flex;
     align-items: center;
     border: none;
     outline: none;
-    color: ${({ theme }) => theme.colors.beige};
+    color: #988989;
     font-size: 15px;
-    border-radius: 40px;
+    border-radius: 5px;
     text-align: center;
-    box-shadow: ${({ theme }) => theme.baseBoxShadow};
-    overflow: hidden;
-    transition: ${({ theme }) => theme.transition};
+    transition: all 0.3s ease;
+
     :hover {
       background-color: ${({ theme }) => theme.colors.grey};
       color: ${({ theme }) => theme.colors.green};
@@ -87,29 +111,18 @@ export const Item = styled.li`
     text-align: left;
     gap: 30px;
   }
-  .nameWrap {
-    width: 300px;
-    position: relative;
 
-    ::after {
-      content: '';
-      position: absolute;
-      width: 1px;
-      height: 29px;
-      top: -4px;
-      left: 315px;
-      background-color: ${({ theme }) => theme.colors.grey};
-    }
-  }
   .buttonsWrapper {
     display: flex;
     gap: 10px;
+    width: 100px;
     justify-content: flex-end;
+    width: 200px;
   }
   .inputName {
-    position: relative;
+    /* position: relative; */
 
-    ::after {
+    /* ::after {
       content: '';
       position: absolute;
       width: 1px;
@@ -117,20 +130,20 @@ export const Item = styled.li`
       top: -4px;
       left: 315px;
       background-color: ${({ theme }) => theme.colors.grey};
-    }
+    } */
   }
 
   .input {
     display: block;
-    height: 40px;
+    height: 20px;
     padding: 0;
-    width: 264px;
+    width: 100px;
     padding: 0;
     background-color: ${({ theme }) => theme.colors.inputBgColor};
     border-radius: 10px;
-    padding: 0 10px;
-    margin-top: 8px;
-    font-size: 16px;
+    padding: 0 5px;
+    /* margin-top: 8px; */
+    font-size: 10px;
     font-weight: 300;
     color: white;
     border-top: none;
@@ -146,6 +159,12 @@ export const Item = styled.li`
     :focus {
       outline: none;
       box-shadow: ${({ theme }) => theme.colors.baseBoxShadow};
+    }
+
+    ${mixins.tablet} {
+      width: 170px;
+      padding: 2px 5px;
+      font-size: 15px;
     }
   }
 `;
