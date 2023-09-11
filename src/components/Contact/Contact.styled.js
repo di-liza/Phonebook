@@ -197,4 +197,11 @@ export const Item = styled.li`
       height: 40px;
     }
   }
+  .number {
+    text-align: right;
+    width: 102px;
+    ${mixins.desktop} {
+      width: 280px;
+    }
+  }
 `;

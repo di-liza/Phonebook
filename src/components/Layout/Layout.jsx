@@ -37,7 +37,7 @@ function Layout() {
           </>
         </nav>
       </StyledHeader>
-      <Suspense fallback={<Loader width={80} height={80} top={250} />}>
+      <Suspense fallback={<Loader width={80} height={80} top={150} />}>
         <Outlet />
       </Suspense>
     </>

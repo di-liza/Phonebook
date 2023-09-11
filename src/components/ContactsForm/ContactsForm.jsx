@@ -14,9 +14,16 @@ function ContactsForm({ closeModal }) {
   const contacts = useSelector(contactsSelector);
 
   const handleFormSubmit = (values, { resetForm }) => {
+    console.log('values:', values);
+    const numberFormattedValue = values.number.replace(
+      /(\d{3})(\d{3})(\d{3})(?=\d)/g,
+      '$1 $2'
+    );
+
+    console.log('numberFormattedValue:', numberFormattedValue);
     const newContact = {
       name: values.name,
-      number: values.number,
+      number: numberFormattedValue,
     };
 
     const isContactExists = contacts.some(

@@ -10,6 +10,7 @@ export const StyledContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  /* height: 90vh; */
 
   ${mixins.tablet} {
     width: 700px;

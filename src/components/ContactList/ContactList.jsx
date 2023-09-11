@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-// import { useLogoutRedirect } from 'hooks/logOutRedirects';
 import { useSelector } from 'react-redux';
 import { contactsSelector, selectIsLoading } from 'redux/contacts/selectors';
-import { Container, Filter, Loader, Modal } from 'components';
+import { Filter, Loader, Modal } from 'components';
 import { Contact } from 'components';
 import { ContactsWrapper } from './ContactList.styled';
 import { TiUserAdd } from 'react-icons/ti';
@@ -38,7 +37,7 @@ function ContactList() {
       </div>
       <Filter />
       {isLoading ? (
-        <Loader height={80} width={80} top={100} />
+        <Loader height={80} width={80} top={50} />
       ) : (
         <ul className="contactList">
           {filteredContacts.length !== 0 &&

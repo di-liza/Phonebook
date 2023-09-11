@@ -2,7 +2,7 @@ import { FiUser, FiPhone } from 'react-icons/fi';
 
 const initialValues = {
   name: '',
-  number: '(123)',
+  number: '(123) ',
 };
 const contactInputs = [
   {

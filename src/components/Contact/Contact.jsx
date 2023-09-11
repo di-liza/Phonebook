@@ -59,7 +59,7 @@ function Contact({ contact }) {
         ) : (
           <div className="contactInfoWrap">
             <p>{name}</p>
-            <p>{number}</p>
+            <p className="number">{number}</p>
           </div>
         )}
       </div>
