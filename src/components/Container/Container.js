@@ -15,7 +15,7 @@ export const StyledContainer = styled.div`
     width: 700px;
     padding: 25px 20px;
   }
-  ${mixins.tablet} {
+  ${mixins.desktop} {
     width: 1200px;
   }
 `;

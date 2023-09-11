@@ -65,7 +65,7 @@ function Contact({ contact }) {
       </div>
       <div className="buttonsWrapper">
         <a className="callLink" href={`tel:${number}`}>
-          <FiPhone size={15} />
+          <FiPhone size={20} />
         </a>
         {isEditing ? (
           <button

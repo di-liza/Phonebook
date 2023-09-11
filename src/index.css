@@ -5,22 +5,45 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url('https://wallpaperaccess.com/full/1760772.jpg');
-  /* background: url('./img/background.jpg'); */
-  background-size: 100% 100%;
   height: 100vh;
-  background-repeat: no-repeat;
-  background-position: cover;
-  /* background: radial-gradient(circle at 49% 100%, #ededed 5%, #8f8b8b 91%); */
+  width: 100vw;
+  background-position: center;
   background-size: cover;
-  /* overflow: hidden; */
-  @media screen and (min-width: 760px) {
-    height: 100vh;
-  }
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('./images/background-mob-1x.jpg');
+
   color: #fff;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('./images/background-mob-2x.jpg');
+  }
+  @media screen and (min-width: 370px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('./images/background-tab-1x.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('./images/background-tab-2x.jpg');
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('./images/background-desk-1x.jpg');
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('./images/background-desk-2x.jpg');
+    }
+  }
 }
 
 code {
