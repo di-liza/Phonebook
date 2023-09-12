@@ -1,11 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initialState } from './initialState';
-import {
-  createContact,
-  deleteContact,
-  editContact,
-  getContacts,
-} from './operation';
 import {
   handlDeleteContactFullfiled,
   handleCreateContactFullfiled,
@@ -14,6 +7,13 @@ import {
   handlePanding,
   handleRejected,
 } from './handlers';
+import { initialState } from './initialState';
+import {
+  createContact,
+  deleteContact,
+  editContact,
+  getContacts,
+} from './operation';
 
 const contactsSlice = createSlice({
   name: 'contacts',

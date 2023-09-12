@@ -1,5 +1,5 @@
-import { Container, ContactList } from 'components';
-import React, { useEffect } from 'react';
+import { ContactList, Container } from 'components';
+import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getContacts } from 'redux/contacts/operation';
 

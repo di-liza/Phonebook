@@ -1,6 +1,6 @@
+import { ErrorMessage } from 'formik';
 import React from 'react';
 import { FormStyled, InputStyled, StyledLink } from './FormTemplate';
-import { ErrorMessage } from 'formik';
 
 function FormTemplate({
   title,

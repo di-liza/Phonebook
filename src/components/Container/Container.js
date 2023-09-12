@@ -1,6 +1,5 @@
+import styled from '@emotion/styled';
 import { mixins } from 'constants';
-
-const { default: styled } = require('@emotion/styled');
 
 export const StyledContainer = styled.div`
   width: 300px;

@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 
-import { Item } from './Contact.styled';
 import { TiDelete, TiEdit, TiInputChecked } from 'react-icons/ti';
+import { Item } from './Contact.styled';
 
-import { useDispatch } from 'react-redux';
-import { deleteContact, editContact } from 'redux/contacts/operation';
 import { useState } from 'react';
-import { toast } from 'react-toastify';
 import { FiPhone } from 'react-icons/fi';
+import { useDispatch } from 'react-redux';
+import { toast } from 'react-toastify';
+import { deleteContact, editContact } from 'redux/contacts/operation';
 
 function Contact({ contact }) {
   const dispatch = useDispatch();

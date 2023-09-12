@@ -1,5 +1,5 @@
-import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
 import { mixins } from 'constants';
 
 const slideIn = keyframes`
@@ -141,10 +141,6 @@ export const Item = styled.li`
     .icon {
       width: 30px;
       height: 30px;
-      /* ${mixins.desktop} {
-        width: 25px;
-        height: 25px;
-      } */
     }
   }
   .textWrapper {
@@ -202,7 +198,10 @@ export const Item = styled.li`
   }
   .number {
     text-align: right;
-    width: 102px;
+    width: 105px;
+    ${mixins.tablet} {
+      width: 145px;
+    }
     ${mixins.desktop} {
       width: 280px;
     }

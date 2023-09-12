@@ -1,4 +1,4 @@
-import { FiUser, FiPhone } from 'react-icons/fi';
+import { FiPhone, FiUser } from 'react-icons/fi';
 
 const initialValues = {
   name: '',

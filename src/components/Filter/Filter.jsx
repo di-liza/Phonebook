@@ -1,7 +1,7 @@
+import { BiSearchAlt2 } from 'react-icons/bi';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectFiter, setFilterValue } from 'redux/filter';
 import { FilterWrapp } from './Filter.styled';
-import { useDispatch, useSelector } from 'react-redux';
-import { BiSearchAlt2 } from 'react-icons/bi';
 
 function Filter() {
   const filter = useSelector(selectFiter);

@@ -1,9 +1,9 @@
 import { Container, FormTemplate } from 'components';
+import { registerSchema } from 'components/schemas';
+import { Formik } from 'formik';
 import { TiArrowRight } from 'react-icons/ti';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/operation';
-import { registerSchema } from 'components/schemas';
-import { Formik } from 'formik';
 import registerFormData from './registerFormData';
 
 function RegisterForm() {
@@ -25,8 +25,8 @@ function RegisterForm() {
           title={'Sign up'}
           regBtnText={'Create account'}
           inputs={registerFormData.registerInputs}
-          linkText={' Sign in'}
-          welcomeMessage={' Already have an account?'}
+          linkText={'Sign in'}
+          welcomeMessage={'Already have an account?'}
           linkTo={'/login'}
           linkIcon={<TiArrowRight size={17} />}
         />

@@ -1,11 +1,9 @@
-// import { useLogoutRedirect } from 'hooks/logOutRedirects';
-import React from 'react';
+import { HiMiniArrowRightOnRectangle } from 'react-icons/hi2';
+import { TiUser } from 'react-icons/ti';
 import { useDispatch, useSelector } from 'react-redux';
 import { logOut } from 'redux/auth/operation';
 import { nameSelector } from 'redux/auth/selectors';
 import { UserMenuStyled } from './UserMenu.styled';
-import { TiUser } from 'react-icons/ti';
-import { HiMiniArrowRightOnRectangle } from 'react-icons/hi2';
 function UserMenu() {
   const dispatch = useDispatch();
 

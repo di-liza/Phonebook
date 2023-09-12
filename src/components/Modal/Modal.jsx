@@ -1,8 +1,8 @@
-import React, { useEffect } from 'react';
-import { createPortal } from 'react-dom';
-import { Backdrop, StyledModal } from './Modal.styled';
 import { ContactsForm } from 'components';
+import { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { TiTimes } from 'react-icons/ti';
+import { Backdrop, StyledModal } from './Modal.styled';
 
 const modalRoot = document.getElementById('modal');
 

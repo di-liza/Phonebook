@@ -1,7 +1,7 @@
+import styled from '@emotion/styled';
 import { mixins } from 'constants';
 import { NavLink } from 'react-router-dom';
 import backgroundImages from '../images';
-const { default: styled } = require('@emotion/styled');
 
 export const StyledHeader = styled.header`
   padding: 0;
@@ -18,7 +18,7 @@ export const StyledHeader = styled.header`
     width: 100%;
     height: 1px;
     background-color: #fefefe5c;
-    top: 72px;
+    top: 70px;
     position: absolute;
     z-index: -10;
     ${mixins.desktop} {

@@ -1,5 +1,4 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initialState } from './inicialState';
 import {
   handleLogOutFullfiled,
   handleLoginFullfiled,
@@ -8,6 +7,7 @@ import {
   handleRegisterFullfiled,
   handleRejected,
 } from './handlers';
+import { initialState } from './inicialState';
 import { fetchrefresh, logOut, login, register } from './operation';
 
 const authSlice = createSlice({

@@ -1,18 +1,19 @@
 import { Loader, UserMenu } from 'components';
-import React, { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
+import { AiFillHome } from 'react-icons/ai';
+import { RiContactsBookFill } from 'react-icons/ri';
 import { useSelector } from 'react-redux';
 import { Outlet } from 'react-router-dom';
 import { isLoggedInSelector } from 'redux/auth/selectors';
 import { AuthLink, Backdrop, StyledHeader, StyledLink } from './Layout.styled';
-import { AiFillHome } from 'react-icons/ai';
-import { RiContactsBookFill } from 'react-icons/ri';
 
 function Layout() {
   const [height, setHeight] = useState(null);
-  
+
   useEffect(() => {
     window.addEventListener('scroll', () => {
       const scrollTop = window.scrollY;
+      console.log('scrollTop:', scrollTop);
       setHeight(scrollTop);
     });
   }, []);
@@ -22,7 +23,7 @@ function Layout() {
     <>
       <StyledHeader
         style={{
-          background: height < 80 ? 'transparent' : 'rgb(19 12 35 / 74%)',
+          background: height < 50 ? 'transparent' : 'rgb(19 12 35 / 74%)',
         }}
       >
         <nav className="navigation">

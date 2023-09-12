@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import { Contact, Filter, Loader, Modal } from 'components';
+import { useState } from 'react';
+import { TiUserAdd } from 'react-icons/ti';
 import { useSelector } from 'react-redux';
 import { contactsSelector, selectIsLoading } from 'redux/contacts/selectors';
-import { Filter, Loader, Modal } from 'components';
-import { Contact } from 'components';
-import { ContactsWrapper } from './ContactList.styled';
-import { TiUserAdd } from 'react-icons/ti';
 import { selectFiter } from 'redux/filter';
+import { ContactsWrapper } from './ContactList.styled';
 
 function ContactList() {
   const contacts = useSelector(contactsSelector);

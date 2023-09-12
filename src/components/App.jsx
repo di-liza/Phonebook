@@ -1,15 +1,15 @@
-import React, { useEffect, lazy } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Route, Routes } from 'react-router-dom';
 
 import { ThemeProvider } from '@emotion/react';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import { Layout, PrivateRoute, PublicRoute } from 'components';
+import { theme } from 'constants';
 import { fetchrefresh } from 'redux/auth/operation';
 import { isRefreshingSelector } from 'redux/auth/selectors';
-import { theme } from 'constants';
 
 const Contacts = lazy(() => import('pages/Contacts'));
 const Home = lazy(() => import('pages/Home'));

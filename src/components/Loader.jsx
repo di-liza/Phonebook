@@ -20,7 +20,9 @@ const Loader = ({ height, width, top }) => {
         strokeWidth={2}
         strokeWidthSecondary={2}
       />
-      <p style={{ margin: '0 auto', width: '70px', fontSize:'17px' }}>Loading...</p>
+      <p style={{ margin: '0 auto', width: '70px', fontSize: '17px' }}>
+        Loading...
+      </p>
     </>
   );
 };

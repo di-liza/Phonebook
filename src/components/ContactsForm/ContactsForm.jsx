@@ -1,12 +1,11 @@
-import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { createContact } from 'redux/contacts/operation';
 
+import { FormTemplate } from 'components';
+import { contactSchema } from 'components/schemas';
+import { Formik } from 'formik';
 import { toast } from 'react-toastify';
 import { contactsSelector } from 'redux/contacts/selectors';
-import { Formik } from 'formik';
-import { contactSchema } from 'components/schemas';
-import { FormTemplate } from 'components';
 import contactsFormData from './contactsFormData';
 
 function ContactsForm({ closeModal }) {

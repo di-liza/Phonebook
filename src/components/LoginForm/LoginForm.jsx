@@ -1,9 +1,9 @@
 import { Container, FormTemplate } from 'components';
-import { useDispatch } from 'react-redux';
-import { login } from 'redux/auth/operation';
+import { loginSchema } from 'components/schemas';
 import { Formik } from 'formik';
 import { TiArrowRight } from 'react-icons/ti';
-import { loginSchema } from 'components/schemas';
+import { useDispatch } from 'react-redux';
+import { login } from 'redux/auth/operation';
 import loginFormData from './loginFormData.js';
 
 function LoginForm() {
@@ -24,7 +24,7 @@ function LoginForm() {
         <FormTemplate
           title={'Sing in'}
           inputs={loginFormData.loginInputs}
-          welcomeMessage={' New to Phone Book?'}
+          welcomeMessage={'New to Phone Book?'}
           linkText={'Create an account'}
           linkTo={'/register'}
           linkIcon={<TiArrowRight size={20} />}
