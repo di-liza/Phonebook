@@ -1,12 +1,11 @@
 import styled from '@emotion/styled';
 import { mixins } from 'constants';
+const windowHeight = window.innerHeight;
 
 export const ContactsWrapper = styled.div`
-  height: 500px;
   overflow-y: scroll;
   font-size: 10px;
-  height: 350px;
-  margin: 30px auto;
+  margin: ${windowHeight > 500 ? '30px 0' : '15px 0'};
   width: 250px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.13);
@@ -17,7 +16,9 @@ export const ContactsWrapper = styled.div`
   color: #fff;
   letter-spacing: 0.5px;
   border: none;
+  overflow-x: hidden;
   padding: 15px 0;
+  height: ${windowHeight > 500 ? '350px' : '170px'};
 
   ${mixins.mobile} {
     width: 300px;
