@@ -24,7 +24,6 @@ function App() {
     dispatch(fetchrefresh());
   }, [dispatch]);
 
-  // console.log('window.innerHeight - ', window.innerHeight);
   return (
     <ThemeProvider theme={theme}>
       {!isRefreshing && (

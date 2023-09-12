@@ -1,9 +1,13 @@
 import { mixins } from 'constants';
 import { NavLink } from 'react-router-dom';
+import backgroundImages from '../images';
 const { default: styled } = require('@emotion/styled');
 
 export const StyledHeader = styled.header`
   padding: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
   display: flex;
   justify-content: center;
   width: 100%;
@@ -14,7 +18,7 @@ export const StyledHeader = styled.header`
     width: 100%;
     height: 1px;
     background-color: #fefefe5c;
-    top: 80px;
+    top: 72px;
     position: absolute;
     z-index: -10;
     ${mixins.desktop} {
@@ -26,7 +30,6 @@ export const StyledHeader = styled.header`
 
     display: flex;
     padding: 16px;
-    position: relative;
     justify-content: space-between;
 
     align-items: center;
@@ -54,12 +57,14 @@ export const StyledHeader = styled.header`
     justify-content: center;
     align-items: center;
   }
+  .headerBckrd {
+    background-color: #6240a9;
+  }
 `;
 
 export const StyledLink = styled(NavLink)`
   color: white;
   font-size: 30px;
-  /* position: relative; */
   text-decoration: none;
 
   transition: ${({ theme }) => theme.transition};
@@ -88,15 +93,6 @@ export const StyledLink = styled(NavLink)`
 `;
 
 export const AuthLink = styled(NavLink)`
-  /* color: white;
-  font-size: 15px;
-
-  text-decoration: none;
-  padding: 5px 10px;
-
-  border: 2px solid grey;
-  border-radius: 5px; */
-
   color: white;
   font-size: 15px;
   text-decoration: none;
@@ -116,8 +112,49 @@ export const AuthLink = styled(NavLink)`
   :hover {
     color: rgb(212 66 213);
   }
-  /* .linksWrapper {
-    display: flex;
-    gap: 20px;
-  } */
+`;
+export const Backdrop = styled.div`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #15151580;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(${backgroundImages.mobile1x});
+
+  color: #fff;
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${backgroundImages.mobile2x});
+  }
+  @media screen and (min-width: 370px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${backgroundImages.tablet1x});
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(${backgroundImages.tablet2x});
+    }
+  }
+
+  @media screen and (min-width: 760px) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url(${backgroundImages.desktop1x});
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(${backgroundImages.desktop2x});
+    }
+  }
 `;
