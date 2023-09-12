@@ -12,6 +12,7 @@ export const HomeContainer = styled.div`
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
+  z-index: 100;
 
   ${mixins.tablet} {
     width: 700px;
