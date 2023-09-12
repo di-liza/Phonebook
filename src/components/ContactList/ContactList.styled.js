@@ -18,6 +18,7 @@ export const ContactsWrapper = styled.div`
   overflow-x: hidden;
   padding: 15px 0;
   height: 100vh;
+  padding: 50px 0 25px 0;
 
   ${mixins.mobile} {
     width: 300px;

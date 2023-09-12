@@ -109,6 +109,10 @@ export const Item = styled.li`
       background-color: ${({ theme }) => theme.colors.grey};
       color: ${({ theme }) => theme.colors.green};
     }
+    .icon {
+      width: 30px;
+      height: 30px;
+    }
   }
   .callLink {
     width: 20px;
@@ -135,12 +139,12 @@ export const Item = styled.li`
       height: 30px;
     }
     .icon {
-      width: 20px;
-      height: 20px;
-      ${mixins.desktop} {
+      width: 30px;
+      height: 30px;
+      /* ${mixins.desktop} {
         width: 25px;
         height: 25px;
-      }
+      } */
     }
   }
   .textWrapper {
@@ -166,7 +170,6 @@ export const Item = styled.li`
     background-color: ${({ theme }) => theme.colors.inputBgColor};
     border-radius: 10px;
     padding: 0 5px;
-    /* margin-top: 8px; */
     font-size: 10px;
     font-weight: 300;
     color: white;
@@ -191,7 +194,7 @@ export const Item = styled.li`
       font-size: 15px;
     }
     ${mixins.desktop} {
-      width: 350px;
+      width: 340px;
       padding: 2px 5px;
       font-size: 26px;
       height: 40px;

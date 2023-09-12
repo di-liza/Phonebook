@@ -65,7 +65,7 @@ function Contact({ contact }) {
       </div>
       <div className="buttonsWrapper">
         <a className="callLink" href={`tel:${number}`}>
-          <FiPhone size={20} />
+          <FiPhone size={40} />
         </a>
         {isEditing ? (
           <button
@@ -74,7 +74,7 @@ function Contact({ contact }) {
             onClick={handleSaveClick}
             title="Save changes"
           >
-            <TiInputChecked className="icon" />
+            <TiInputChecked size={40} />
           </button>
         ) : (
           <button
@@ -83,7 +83,7 @@ function Contact({ contact }) {
             title="Edit contact"
             onClick={handleEditClick}
           >
-            <TiEdit className="icon" size={20} />
+            <TiEdit size={40} />
           </button>
         )}
 
@@ -95,7 +95,7 @@ function Contact({ contact }) {
             dispatch(deleteContact(contact.id));
           }}
         >
-          <TiDelete className="icon" size={20} />
+          <TiDelete size={40} />
         </button>
       </div>
     </Item>
