@@ -1,18 +1,28 @@
 import React from 'react';
-import { HomeContainer } from './HomePageView';
+import { ContactPageLink, HomeContainer } from './HomePageView';
+import { useSelector } from 'react-redux';
+import { isLoggedInSelector } from 'redux/auth/selectors';
 
 function HomePageView() {
+  const isLoggedIn = useSelector(isLoggedInSelector);
+
   return (
     <HomeContainer>
-      <h1 className="title">Welcome to the phone book! </h1>
+      <div className="titlesWrapp">
+        <h1 className="title">Welcome</h1>
+        <h2 className="subtitle">Phone Book</h2>
+      </div>
       <p>
         This is a beautifully designed phonebook app that saves contacts
         securely. Register to create your collection of phone numbers.
       </p>
-      <p>
+      {/* <p>
         Experience the convenience and reliability of our phonebook app. Start
         organizing your contacts today!"
-      </p>
+      </p> */}
+      <ContactPageLink to={isLoggedIn ? '/contacts' : '/login'}>
+        Start using
+      </ContactPageLink>
     </HomeContainer>
   );
 }
