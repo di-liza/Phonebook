@@ -49,13 +49,15 @@ export const FilterWrapp = styled.div`
     }
   }
   .icon {
-    top: 7px;
+    top: 10px;
     left: 7px;
     position: absolute;
+
     ${mixins.tablet} {
-      top: 5px;
-      left: 7px;
+      top: 9px;
+      left: 11px;
     }
+
     ${mixins.desktop} {
       width: 20px;
       height: 25px;
