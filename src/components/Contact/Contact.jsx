@@ -14,6 +14,7 @@ function Contact({ contact }) {
   const [isEditing, setIsEditing] = useState(false);
   const [name, setName] = useState(contact.name);
   const [number, setNumber] = useState(contact.number);
+  const [sideOut, setSideOut] = useState(false);
 
   const handleEditClick = () => {
     setIsEditing(true);
@@ -31,7 +32,7 @@ function Contact({ contact }) {
   };
 
   return (
-    <Item>
+    <Item sideOut={sideOut}>
       <div className="textWrapper">
         {isEditing ? (
           <div className="inputWrapp">
@@ -92,7 +93,10 @@ function Contact({ contact }) {
           type="button"
           title="Delete contact"
           onClick={() => {
-            dispatch(deleteContact(contact.id));
+            setSideOut(true);
+            setTimeout(() => {
+              dispatch(deleteContact(contact.id));
+            }, 400);
           }}
         >
           <TiDelete size={40} />

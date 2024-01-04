@@ -1,13 +1,23 @@
-import { keyframes } from '@emotion/react';
+import { keyframes, css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { mixins } from 'constants';
 
+const cubic = 'cubic-bezier(1, -0.26, 0, 1.17)';
 const slideIn = keyframes`
   from {
     transform: translateX(100%);
   }
   to {
     transform: translateX(0);
+  }
+`;
+
+const slideIOut = keyframes`
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform:  translateX(200%);
   }
 `;
 
@@ -25,7 +35,15 @@ export const Item = styled.li`
   :nth-last-of-type() {
     margin-bottom: 0px;
   }
-  animation: ${slideIn} 0.3s ease-in-out forwards;
+  animation: ${({ sideOut }) => {
+    return !sideOut
+      ? css`
+          ${slideIn} 0.3s ${cubic} forwards
+        `
+      : css`
+          ${slideIOut} 0.3s ${cubic} forwards
+        `;
+  }};
 
   ${mixins.tablet} {
     width: 455px;
